@@ -53,7 +53,7 @@ public class PracticeQ {
     }
 }
 
-class Employee implements Comparable<Employee>{
+class Employee {
     int id;
     String name;
     int salary;
@@ -68,9 +68,9 @@ class Employee implements Comparable<Employee>{
         return "Employee: "+id + " "+name+" "+salary;
     }
 
-    @Override
-    public int compareTo(Employee employee){
-        return Integer.compare(this.id,employee.id);
-    }
+//    @Override
+//    public int compareTo(Employee employee){
+//        return Integer.compare(this.id,employee.id);
+//    }
 
 }
