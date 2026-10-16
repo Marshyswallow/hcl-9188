@@ -2,7 +2,7 @@ package model.Library;
 
 import java.time.Year;
 
-public abstract class LibraryItem implements Borrowable {
+public abstract class LibraryItem {
     private static int nextId = 1001;
     private final int id;
     private String title;
