@@ -1,4 +1,4 @@
-package in.SpringCore.constructorDi.employee;
+package in.SpringCore.constructorDi.Employee;
 
 public class Department {
     public void getDepartment(){

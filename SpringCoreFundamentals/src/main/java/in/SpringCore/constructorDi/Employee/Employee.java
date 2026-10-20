@@ -1,4 +1,4 @@
-package in.SpringCore.constructorDi.employee;
+package in.SpringCore.constructorDi.Employee;
 
 public class Employee {
     private Address address;

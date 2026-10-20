@@ -1,22 +1,22 @@
-package in.SpringCore.constructorDi.employee;
+package in.SpringCore.constructorDi.Employee;
+
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+import java.beans.DefaultPersistenceDelegate;
+
 public class AppConfig {
-
     @Bean
     public Address address(){
         return new Address();
     }
 
     @Bean
-    public Salary salary() {
+    public Salary salary(){
         Salary salary = new Salary();
-        salary.setBasic(30000);
-        salary.setDa(6000);
-        salary.setHra(3000);
+        salary.setBasic(3000);
+        salary.setDa(5000);
+        salary.setHra(6000);
         return salary;
     }
 
@@ -29,6 +29,5 @@ public class AppConfig {
     public Employee employee(Address address,Salary salary,Department department){
         return new Employee(address,salary,department);
     }
-
 
 }
