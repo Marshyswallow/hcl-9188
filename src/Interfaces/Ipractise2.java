@@ -6,11 +6,11 @@ public class Ipractise2 {
     }
 }
 
-interface animal{
+interface animal2{
     void sound();
 }
 
-abstract class Dog implements animal{
+abstract class Dog2 implements animal2{
     abstract public void sound();
 }
 

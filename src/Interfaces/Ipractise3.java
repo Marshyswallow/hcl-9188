@@ -10,15 +10,15 @@ public class Ipractise3 {
 
 //Interface inheritance
 
-interface Animal{
+interface AnimalEat{
     void eat();
 }
 
-interface dog extends Animal{
+interface DogInterface extends AnimalEat{
     void bark();
 }
 
-class StreetDog implements dog{
+class StreetDog implements DogInterface{
     @Override
     public void bark() {
         System.out.println("Dog barks");
