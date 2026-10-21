@@ -2,7 +2,7 @@ package package01;
 
 public class Constructor {
     public static void main(String [] args){
-        Employee e1=new accountant(101,500);
+        accountant e1=new accountant(101,500);
         e1.shop();
         e1.parentShop();
     }
