@@ -10,11 +10,9 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public String createnewEmployee(){
-        Employee emp1=new Employee(200,"Java ,c++ ,react ,mongoDb","CSE","Vishal");
-        employeeRepository.save(emp1);
-
-        return "Employee is added successfully";
+    public Employee registerEmployee(Employee employee){
+        employeeRepository.save(employee);
+        return employee;
     }
 
     public Employee getEmpById(long empid){

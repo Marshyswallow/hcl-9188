@@ -3,12 +3,11 @@ package com.abes.hrmsdatabase.controller;
 import com.abes.hrmsdatabase.model.Employee;
 import com.abes.hrmsdatabase.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin("http://localhost:5173")
+@RequestMapping("/v1/user")
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
@@ -18,9 +17,9 @@ public class EmployeeController {
         return "Hrms is online";
     }
 
-    @GetMapping("/addemp")
-    public String addEmp(){
-        return employeeService.createnewEmployee();
+    @PostMapping("/addemp")
+    public Employee addEmp(@RequestBody Employee employee) {
+        return employeeService.registerEmployee(employee);
     }
 
     @GetMapping("findbyid/{empid}")
