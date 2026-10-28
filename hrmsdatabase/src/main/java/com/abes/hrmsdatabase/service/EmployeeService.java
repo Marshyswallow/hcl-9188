@@ -15,11 +15,11 @@ public class EmployeeService {
         return employee;
     }
 
-    public Employee getEmpById(long empid){
+    public Employee getEmpById(Long empid){
         return employeeRepository.findById(empid).orElse(null);
     }
 
-    public String deleteById(long empid){
+    public String deleteById(Long empid){
         if (!employeeRepository.existsById(empid)) {
             return "Employee not found";
         }

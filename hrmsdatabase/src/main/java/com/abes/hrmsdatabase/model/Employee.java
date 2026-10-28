@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 public class Employee {
     @Id
-    private int id;
+    private Long id;
     private String name;
     private String dept;
     private String progStack;
@@ -16,7 +16,7 @@ public class Employee {
     public Employee(){
     }
 
-    public Employee(int id, String progStack, String dept, String name) {
+    public Employee(Long id, String progStack, String dept, String name) {
 
         this.id = id;
         this.progStack = progStack;
@@ -24,11 +24,11 @@ public class Employee {
         this.name = name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
